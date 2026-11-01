@@ -19,3 +19,5 @@ def test_different_characters():
     assert is_palindrome("abc") is False
 def test_laval():
     assert is_palindrome("laval") is True
+def test_toronto():
+    assert is_palindrome("toronto") is False
