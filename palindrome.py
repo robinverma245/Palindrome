@@ -1,4 +1,7 @@
 
+from collections import deque
+
+
 def is_palindrome(value):
     if not isinstance(value, str):
         raise ValueError("Input must be a string")
@@ -6,5 +9,10 @@ def is_palindrome(value):
     if value == "":
         return False
 
-    if len(value) == 1:
-        return True
+    characters = deque(value)
+
+    while len(characters) > 1:
+        if characters.popleft() != characters.pop():
+            return False
+
+    return True
