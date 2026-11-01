@@ -5,3 +5,6 @@ def is_palindrome(value):
 
     if value == "":
         return False
+
+    if len(value) == 1:
+        return True
