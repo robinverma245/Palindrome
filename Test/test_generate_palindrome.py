@@ -21,3 +21,5 @@ def test_laval():
     assert is_palindrome("laval") is True
 def test_toronto():
     assert is_palindrome("toronto") is False
+def test_sentence_palindrome():
+    assert is_palindrome("Able was I ere I saw Elba") is True
